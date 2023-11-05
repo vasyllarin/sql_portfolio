@@ -44,7 +44,7 @@ change `PARKING(Y_N)` has_parking text;
 -- the column that contains information about parking spaces inlcudes 'Y/N' values - it is preferable to replace them with "yes/no" for readability
 update apartments_poland
 set has_parking = case when has_parking = 'Y' then 'yes'
-					   when has_parking ='N' then 'no'
+		       when has_parking ='N' then 'no'
                        else null end;
 
 -- [9] CAPITALIZING CITY NAMES
